@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\buildMultiTargeting\Gtm_Mgt_Demo.props" />
+</Project>

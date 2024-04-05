@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\build\Gtm_Mgt_Demo.props" />
+</Project>
