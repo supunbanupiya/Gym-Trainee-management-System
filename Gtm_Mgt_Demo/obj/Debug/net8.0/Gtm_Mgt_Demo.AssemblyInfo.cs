@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Gtm_Mgt_Demo")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+919a14aec4a83d833e8660df36d9a838646d011f")]
 [assembly: System.Reflection.AssemblyProductAttribute("Gtm_Mgt_Demo")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Gtm_Mgt_Demo")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

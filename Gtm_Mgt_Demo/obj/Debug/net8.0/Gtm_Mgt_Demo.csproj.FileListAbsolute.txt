@@ -265,3 +265,4 @@ D:\2024\PROJECTS\April projects\Gtm_Mgt_Demo\Gtm_Mgt_Demo\obj\Debug\net8.0\refin
 D:\2024\PROJECTS\April projects\Gtm_Mgt_Demo\Gtm_Mgt_Demo\obj\Debug\net8.0\Gtm_Mgt_Demo.pdb
 D:\2024\PROJECTS\April projects\Gtm_Mgt_Demo\Gtm_Mgt_Demo\obj\Debug\net8.0\Gtm_Mgt_Demo.genruntimeconfig.cache
 D:\2024\PROJECTS\April projects\Gtm_Mgt_Demo\Gtm_Mgt_Demo\obj\Debug\net8.0\ref\Gtm_Mgt_Demo.dll
+D:\2024\PROJECTS\April projects\Gtm_Mgt_Demo\Gtm_Mgt_Demo\obj\Debug\net8.0\Gtm_Mgt_Demo.sourcelink.json

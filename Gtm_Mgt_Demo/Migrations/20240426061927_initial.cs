@@ -6,7 +6,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 namespace Gtm_Mgt_Demo.Migrations
 {
     /// <inheritdoc />
-    public partial class intialmigration : Migration
+    public partial class initial : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
@@ -53,8 +53,9 @@ namespace Gtm_Mgt_Demo.Migrations
                     Address = table.Column<string>(type: "varchar(50)", nullable: false),
                     ImageName = table.Column<string>(type: "nvarchar(100)", nullable: false),
                     CreationDate = table.Column<DateTime>(type: "datetime2", nullable: false),
-                    BloodGroupID = table.Column<int>(type: "int", nullable: true),
-                    TrainingLevelID = table.Column<int>(type: "int", nullable: true)
+                    BloodGroupID = table.Column<int>(type: "int", nullable: false),
+                    TrainingLevelID = table.Column<int>(type: "int", nullable: false),
+                    MonthlyFee = table.Column<int>(type: "int", nullable: false)
                 },
                 constraints: table =>
                 {
@@ -63,12 +64,14 @@ namespace Gtm_Mgt_Demo.Migrations
                         name: "FK_Trainees_BloodGroups_BloodGroupID",
                         column: x => x.BloodGroupID,
                         principalTable: "BloodGroups",
-                        principalColumn: "BloodGroupID");
+                        principalColumn: "BloodGroupID",
+                        onDelete: ReferentialAction.Cascade);
                     table.ForeignKey(
                         name: "FK_Trainees_TrainingLevels_TrainingLevelID",
                         column: x => x.TrainingLevelID,
                         principalTable: "TrainingLevels",
-                        principalColumn: "TrainingLevelID");
+                        principalColumn: "TrainingLevelID",
+                        onDelete: ReferentialAction.Cascade);
                 });
 
             migrationBuilder.CreateTable(

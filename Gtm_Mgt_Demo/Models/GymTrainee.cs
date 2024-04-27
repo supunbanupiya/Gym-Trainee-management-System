@@ -37,7 +37,7 @@ namespace Gtm_Mgt_Demo.Models
 
         [Required]
         [Column(TypeName = "int")]
-        [DisplayName("Weight")]
+        [DisplayName("Weight in KG")]
         public int Weight { get; set; }
 
         [Required]
@@ -59,7 +59,20 @@ namespace Gtm_Mgt_Demo.Models
 
         [NotMapped]
         [DisplayName("Upload File")]
-        public IFormFile Image {  get; set; }
+        public IFormFile ImageFile {  get; set; }
 
-    }
+        [NotMapped]
+        public string _feepaid_status = "unknown";
+
+        //Navigation Property 001
+        public int BloodGroupID { get; set; }
+        public virtual BloodGroup BloodGroup { get; set; }
+
+		//Navigation Property 002
+        public int TrainingLevelID {  get; set; }
+        public virtual TrainingLevel TrainingLevel { get; set; }
+
+        public int MonthlyFee {  get; set; }
+
+	}
 }

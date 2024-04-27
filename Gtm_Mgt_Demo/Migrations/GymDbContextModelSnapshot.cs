@@ -54,7 +54,7 @@ namespace Gtm_Mgt_Demo.Migrations
                     b.Property<int>("Age")
                         .HasColumnType("int");
 
-                    b.Property<int?>("BloodGroupID")
+                    b.Property<int>("BloodGroupID")
                         .HasColumnType("int");
 
                     b.Property<string>("ContactNo")
@@ -84,7 +84,10 @@ namespace Gtm_Mgt_Demo.Migrations
                         .IsRequired()
                         .HasColumnType("varchar(50)");
 
-                    b.Property<int?>("TrainingLevelID")
+                    b.Property<int>("MonthlyFee")
+                        .HasColumnType("int");
+
+                    b.Property<int>("TrainingLevelID")
                         .HasColumnType("int");
 
                     b.Property<int>("Weight")
@@ -147,13 +150,21 @@ namespace Gtm_Mgt_Demo.Migrations
 
             modelBuilder.Entity("Gtm_Mgt_Demo.Models.GymTrainee", b =>
                 {
-                    b.HasOne("Gtm_Mgt_Demo.Models.BloodGroup", null)
+                    b.HasOne("Gtm_Mgt_Demo.Models.BloodGroup", "BloodGroup")
                         .WithMany("GymTrainees")
-                        .HasForeignKey("BloodGroupID");
+                        .HasForeignKey("BloodGroupID")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
 
-                    b.HasOne("Gtm_Mgt_Demo.Models.TrainingLevel", null)
+                    b.HasOne("Gtm_Mgt_Demo.Models.TrainingLevel", "TrainingLevel")
                         .WithMany("GymTrainees")
-                        .HasForeignKey("TrainingLevelID");
+                        .HasForeignKey("TrainingLevelID")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("BloodGroup");
+
+                    b.Navigation("TrainingLevel");
                 });
 
             modelBuilder.Entity("Gtm_Mgt_Demo.Models.MonthlyFeeVoucher", b =>
